@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+html,
+body {
+  background-color: #c0f0ed;
+}
+.review-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.review-container .review-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3.125rem;
+}
+
+.review-container .review-wrapper .review-button {
+  background-color: #3f51b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.review-area {
+  width: 25rem;
+  height: 25rem;
+  background-color: #f1f1f1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 2rem;
+  margin: 1.25rem 0;
+}
+
+.copy-button {
+  background-color: #3f51b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
