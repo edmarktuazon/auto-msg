@@ -3,12 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       buttonId: "reviewBtn",
       containerId: "reviewComment",
-      message: `Hi ,\n\nThe emails are ready for your review. Attached is v1 of the proof file:\n\nPlease let me know if you have any feedback or require any further adjustments. \n\nThanks,\nEd`,
+      message: `Hi, \n\nThe templates are ready for your review. Attached is version 1 of the proof file.
+                \n\n
+                Please feel free to share any feedback or let me know if further adjustments are needed.
+                \n\n
+                Thank you,
+                Ed`,
     },
     {
       buttonId: "templateIDBtn",
       containerId: "templateIDComment",
-      message: `Hi ,\n\nThe Template ID(s) are accessible, and everything is now ready for testing.\n\nFinal version of the file is attached as well for your copy\n\nThanks,\nEd`,
+      message: `Hi, \n\nThe Template ID(s) are now accessible, and everything is ready for testing.
+                \n\n
+                I've attached the final version of the file for your reference: 
+                \n\n
+                Please let me know if you have any requests or need any adjustments to the contents.
+                \n\n
+                Thank you,
+                Ed`,
     },
   ];
 
