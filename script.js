@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       buttonId: "templateIDBtn",
       containerId: "templateIDComment",
-      message: `Hi ,\n\nTemplate ID details are included, and It's ready for testing,\n\nFinal version of the file is ready:\n\nThanks,\nEd`,
+      message: `Hi ,\n\nThe Template ID(s) are accessible, and everything is now ready for testing.\n\nFinal version of the file is attached as well for your copy\n\nThanks,\nEd`,
     },
   ];
 
