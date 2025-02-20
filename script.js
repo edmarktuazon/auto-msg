@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       buttonId: "templateIDBtn",
       containerId: "templateIDComment",
-      message: `Hi, \n\nThe Template IDs are now accessible, and everything is ready for testing.\n\nI've attached the final version of the file for your reference:\n\nPlease let me know if you have any requests or need content adjustments.\n\nThank!`,
+      message: `Hi, \n\nThe Template IDs are now accessible, and everything is ready for testing.\n\nI've attached the final version of the file for your reference:\n\nPlease let me know if you have any requests or need content adjustments.\n\nThanks!`,
     },
   ];
 
@@ -77,7 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
         text: "Copied to clipboard"
       }, 
        navigator.clipboard.writeText(section.message));
-       textarea.style.border = "solid 3px #05ad4b;"
+       textarea.style.border = "solid 3px #05ad4b";
+
     };
 
     button.addEventListener("click", generateMessage);
