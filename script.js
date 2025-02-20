@@ -3,19 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       buttonId: "reviewBtn",
       containerId: "reviewComment",
-      message: `Hi, \n\nThe Templates are ready for review. Attached is the version 1 of the proof file:\n\nPlease let me know if you have any requests or need content adjustments.\n\nThanks,\nEd`,
+      message: `Hi, \n\nThe Templates are ready for review. Attached is the version 1 of the proof file:\n\nPlease let me know if you have any requests or need content adjustments.\n\nThanks!`,
     },
     {
       buttonId: "templateIDBtn",
       containerId: "templateIDComment",
-      message: `Hi, \n\nThe Template ID(s) are now accessible, and everything is ready for testing.\n\nI've attached the final version of the file for your reference:\n\nPlease let me know if you have any requests or need content adjustments.\n\nThanks,\nEd`,
+      message: `Hi, \n\nThe Template IDs are now accessible, and everything is ready for testing.\n\nI've attached the final version of the file for your reference:\n\nPlease let me know if you have any requests or need content adjustments.\n\nThank!`,
     },
   ];
+
+
 
   sections.forEach((section) => {
     const button = document.querySelector(`#${section.buttonId}`);
     const container = document.querySelector(`#${section.containerId}`);
-
     const textarea = document.createElement("textarea");
     const copyButton = document.createElement("button");
     // const randomButton = document.createElement("button");
@@ -30,51 +31,53 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(copyButton);
     // container.appendChild(randomButton);
 
-    const generateMessage = () => {
+  const generateMessage = () => {
       textarea.value = section.message;
       textarea.style.display = "block";
       textarea.classList.add("review-area");
       copyButton.style.display = "inline-block";
       copyButton.classList.add("copy-button");
-      randomButton.style.display = "inline-block";
+      // randomButton.style.display = "inline-block";
       // randomButton.classList.add("random-button");
     };
 
 
-    const generateRandomButton = () => {
-      // generate random comments 
-      const randomCommentVal = "Text"
 
-      const randomComment = document.querySelector("#randomComment");
-      const randomCommentEl = document.createElement("p");
-      
-      randomCommentEl.innerHTML = randomCommentVal;
-      // localStorage.setItem(section.message, "Test");
+  //   const generateRandomButton = () => {
 
+  //     if(!section.message){
+  //       true;
+  //     }else{
+  //       textarea.value = ""
+  //     }
+  //     console.log(textarea.value, "Removed comment");
 
-      // if(section.message === true){
-      //   console.log("true");
-      // }
+  //     const randomComment = [
+  //       {
+  //         message: `Comment 1`,
+  //       },
+  //       {
+  //         message: `Comment 2`,
+  //       },
+  //     ];
 
-      // for(let i = 0; i > 1; i++) {
-      //   if(section.message = 1) {
-      //     console.log(true, "Comment has been created");
-      //     // randomComment.appendChild(randomCommentEl);
-      //     console.log(section.message);
-      //   }else {
-      //     console.log(false, "Comment has not been created");
-      //     console.log(section.message);
+  //     if(generateRandomButton === true){
+  //     textarea.value = randomComment[0].message;
+  //   }else if(generateRandomButton === true ){
+  //     textarea.value = randomComment[1].message;
 
-      //   }
-      // }
-      
-      // randomComment.appendChild(randomCommentEl);
-
-    }
-         
-
+  //   }else{
+  //     undefined;
+  //   }
+  // }
+        
     const copyMessage = () => {
-      navigator.clipboard.writeText(section.message);
+      swal.fire({
+        icon: "success",
+        text: "Copied to clipboard"
+      }, 
+       navigator.clipboard.writeText(section.message));
+       textarea.style.border = "solid 3px #05ad4b;"
     };
 
     button.addEventListener("click", generateMessage);
