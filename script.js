@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       textarea.classList.add("review-area");
       copyButton.style.display = "inline-block";
       copyButton.classList.add("copy-button");
+      
       // randomButton.style.display = "inline-block";
       // randomButton.classList.add("random-button");
     };
@@ -77,7 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
         text: "Copied to clipboard"
       }, 
        navigator.clipboard.writeText(section.message));
+       navigator.clipboard.writeText(textarea.value);
        textarea.style.border = "solid 3px #05ad4b";
+
+       console.log(textarea.value)
 
     };
 
